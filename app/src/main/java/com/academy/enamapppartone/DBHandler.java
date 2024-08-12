@@ -21,9 +21,9 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db){
 
-        String query="CREATE TABLE " +TABLE_NAME +"("
-                +ID_COL +"INTEGER PRIMARY KEY AUTOINCREMENT,"
-                +NAME_COL +"TEXT)";
+        String query="CREATE TABLE " + TABLE_NAME +"("
+                + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + NAME_COL + " TEXT)";
 
         db.execSQL(query);
 
