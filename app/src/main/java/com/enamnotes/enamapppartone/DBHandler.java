@@ -1,4 +1,4 @@
-package com.academy.enamapppartone;
+package com.enamnotes.enamapppartone;
 
 import android.content.ContentValues;
 import android.content.Context;
