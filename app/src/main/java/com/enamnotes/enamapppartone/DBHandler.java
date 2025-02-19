@@ -1,9 +1,14 @@
 package com.enamnotes.enamapppartone;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.io.File;
 
 public class DBHandler extends SQLiteOpenHelper {
 
@@ -13,11 +18,28 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String ID_COL="id";
     private static final String NAME_COL="name";
 
-    public DBHandler(Context context){
+    /*public DBHandler(Context context){
 
         super(context, DB_NAME,null,DB_VERSION);
 
+    }*/
+
+    public DBHandler(Context context){
+
+        super(context, getCustomDatabasePath(context),null,DB_VERSION);
+
     }
+
+    private static String getCustomDatabasePath(Context context) {
+        File directory = context.getExternalFilesDir(null);
+        String customDbPath = directory.getAbsolutePath() + "/participantdatabase.db";
+        Log.d(TAG, "Custom Database Path: " + customDbPath);
+        return customDbPath;
+    }
+
+
+
+
 
     public void onCreate(SQLiteDatabase db){
 
