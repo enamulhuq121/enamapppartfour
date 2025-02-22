@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 dbHandler.addNewParticipant(participantName);
                 Toast.makeText(MainActivity.this, "Participant has been added", Toast.LENGTH_SHORT).show();
 
+                participantNameEdit.setText("");
 
 
             }
