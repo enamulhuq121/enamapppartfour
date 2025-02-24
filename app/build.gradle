@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.academy.enamapppartone'
+    namespace 'com.enamnotes.enamapppartfour'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.academy.enamapppartone"
+        applicationId "com.enamnotes.enamapppartfour"
         minSdk 24
         targetSdk 34
         versionCode 1

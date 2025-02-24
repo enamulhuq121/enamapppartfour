@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EnamAppPartOne"
+rootProject.name = "enamapppartfour"
 include ':app'

@@ -10,17 +10,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EnamAppPartOne"
+        android:theme="@style/Theme.enamapppartfour"
         tools:targetApi="31">
         <activity
-            android:name="com.enamnotes.enamapppartone.MainActivity"
+            android:name="com.enamnotes.enamapppartfour.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+            <!-- New activity added for viewing participants -->
+         </activity>
+        <activity android:name=".ViewParticipant"/>
+        <activity android:name=".UpdateParticipantActivity"/>
+
+
     </application>
 
 </manifest>

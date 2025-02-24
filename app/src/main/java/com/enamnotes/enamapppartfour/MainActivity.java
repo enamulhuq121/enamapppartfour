@@ -1,5 +1,6 @@
-package com.enamnotes.enamapppartone;
+package com.enamnotes.enamapppartfour;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.academy.enamapppartone.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText participantNameEdit;
     private Button addParticipantBtn;
     private DBHandler dbHandler;
+
+    private Button readParticipantBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         participantNameEdit = findViewById(R.id.idParticipantName);
         addParticipantBtn= findViewById(R.id.idParticipantBtn);
+        readParticipantBtn = findViewById(R.id.idBtnReadParticipant);
 
         dbHandler  = new DBHandler(MainActivity.this);
 
@@ -47,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        // add on click listener for our read participants button.
+        readParticipantBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // opening a new activity via an intent.
+                Intent i = new Intent(MainActivity.this, ViewParticipant.class);
+                startActivity(i);
+            }
+        });
+
 
 
     }
